@@ -23,7 +23,7 @@ class _RankingPageState extends State<RankingPage> {
 
   Future<void> fetchRanking() async {
     final response = await http.get(
-      Uri.parse('http://127.0.0.1:8000/ranking'),
+      Uri.parse('https://americafitness-production.up.railway.app/ranking'),
       headers: {'Authorization': 'Bearer ${widget.token}'},
     );
 

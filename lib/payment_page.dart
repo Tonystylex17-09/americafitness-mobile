@@ -89,7 +89,7 @@ class _PaymentPageState extends State<PaymentPage> {
     setState(() => isLoading = true);
 
     final response = await http.post(
-      Uri.parse('http://127.0.0.1:8000/create-payment'),
+      Uri.parse('https://americafitness-production.up.railway.app/create-payment'),
       headers: {
         'Authorization': 'Bearer ${widget.token}',
         'Content-Type': 'application/json',

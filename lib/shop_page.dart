@@ -24,7 +24,7 @@ class _ShopPageState extends State<ShopPage> {
 
   Future<void> fetchProducts() async {
     final response = await http.get(
-      Uri.parse('http://127.0.0.1:8000/products'),
+      Uri.parse('https://americafitness-production.up.railway.app/products'),
       headers: {'Authorization': 'Bearer ${widget.token}'},
     );
 
@@ -43,7 +43,7 @@ class _ShopPageState extends State<ShopPage> {
 
   Future<void> addToCart(int productId) async {
     final response = await http.post(
-      Uri.parse('http://127.0.0.1:8000/cart/add'),
+      Uri.parse('https://americafitness-production.up.railway.app/cart/add'),
       headers: {
         'Authorization': 'Bearer ${widget.token}',
         'Content-Type': 'application/json',

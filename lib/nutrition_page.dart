@@ -30,7 +30,7 @@ class _NutritionPageState extends State<NutritionPage> {
     });
 
     final response = await http.post(
-      Uri.parse('http://127.0.0.1:8000/calculate-nutrition'),
+      Uri.parse('https://americafitness-production.up.railway.app/calculate-nutrition'),
       headers: {'Content-Type': 'application/json'},
       body: jsonEncode({
         'sex': selectedSex,

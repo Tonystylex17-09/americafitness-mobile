@@ -28,7 +28,7 @@ class _TrainingPageState extends State<TrainingPage> {
 
   Future<void> fetchExercises() async {
     final response = await http.get(
-      Uri.parse('http://127.0.0.1:8000/my-exercises'),
+      Uri.parse('https://americafitness-production.up.railway.app/my-exercises'),
       headers: {'Authorization': 'Bearer ${widget.token}'},
     );
 
@@ -50,7 +50,7 @@ class _TrainingPageState extends State<TrainingPage> {
 
   Future<void> fetchRecords(int exerciseId) async {
     final response = await http.get(
-      Uri.parse('http://127.0.0.1:8000/exercise-records/$exerciseId'),
+      Uri.parse('https://americafitness-production.up.railway.app/exercise-records/$exerciseId'),
       headers: {'Authorization': 'Bearer ${widget.token}'},
     );
 
@@ -82,7 +82,7 @@ class _TrainingPageState extends State<TrainingPage> {
           ElevatedButton(
             onPressed: () async {
               final response = await http.post(
-                Uri.parse('http://127.0.0.1:8000/exercises'),
+                Uri.parse('https://americafitness-production.up.railway.app/exercises'),
                 headers: {
                   'Authorization': 'Bearer ${widget.token}',
                   'Content-Type': 'application/json',
@@ -122,7 +122,7 @@ class _TrainingPageState extends State<TrainingPage> {
           ElevatedButton(
             onPressed: () async {
               final response = await http.delete(
-                Uri.parse('http://127.0.0.1:8000/exercises/$exerciseId'),
+                Uri.parse('https://americafitness-production.up.railway.app/exercises/$exerciseId'),
                 headers: {'Authorization': 'Bearer ${widget.token}'},
               );
               if (response.statusCode == 200) {
@@ -191,7 +191,7 @@ class _TrainingPageState extends State<TrainingPage> {
           ElevatedButton(
             onPressed: () async {
               final response = await http.post(
-                Uri.parse('http://127.0.0.1:8000/exercise-record'),
+                Uri.parse('https://americafitness-production.up.railway.app/exercise-record'),
                 headers: {
                   'Authorization': 'Bearer ${widget.token}',
                   'Content-Type': 'application/json',

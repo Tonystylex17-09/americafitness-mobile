@@ -23,7 +23,7 @@ class _BadgesPageState extends State<BadgesPage> {
 
   Future<void> fetchBadges() async {
     final response = await http.get(
-      Uri.parse('http://127.0.0.1:8000/badges'),
+      Uri.parse('https://americafitness-production.up.railway.app/badges'),
       headers: {'Authorization': 'Bearer ${widget.token}'},
     );
 

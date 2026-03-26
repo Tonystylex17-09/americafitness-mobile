@@ -20,7 +20,7 @@ class _LoginPageState extends State<LoginPage> {
       isLoading = true;
     });
 
-    final url = Uri.parse('http://127.0.0.1:8000/login');
+    final url = Uri.parse('https://americafitness-production.up.railway.app/login');
     final response = await http.post(
       url,
       headers: {'Content-Type': 'application/x-www-form-urlencoded'},
@@ -39,7 +39,7 @@ class _LoginPageState extends State<LoginPage> {
       final token = data['access_token'];
 
       final userResponse = await http.get(
-        Uri.parse('http://127.0.0.1:8000/users/me'),
+        Uri.parse('https://americafitness-production.up.railway.app/users/me'),
         headers: {'Authorization': 'Bearer $token'},
       );
 

@@ -23,7 +23,7 @@ class _ChallengesPageState extends State<ChallengesPage> {
 
   Future<void> fetchChallenges() async {
     final response = await http.get(
-      Uri.parse('http://127.0.0.1:8000/active-challenges'),
+      Uri.parse('https://americafitness-production.up.railway.app/active-challenges'),
       headers: {'Authorization': 'Bearer ${widget.token}'},
     );
 
@@ -41,7 +41,7 @@ class _ChallengesPageState extends State<ChallengesPage> {
 
   Future<void> updateProgress(int challengeId, int progress) async {
     final response = await http.post(
-      Uri.parse('http://127.0.0.1:8000/update-challenge-progress/$challengeId?progress_value=$progress'),
+      Uri.parse('https://americafitness-production.up.railway.app/update-challenge-progress/$challengeId?progress_value=$progress'),
       headers: {'Authorization': 'Bearer ${widget.token}'},
     );
 

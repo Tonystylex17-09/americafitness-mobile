@@ -29,7 +29,7 @@ class _AttendancePageState extends State<AttendancePage> {
 
   Future<void> fetchAttendance() async {
     final response = await http.get(
-      Uri.parse('http://127.0.0.1:8000/my-attendance'),
+      Uri.parse('https://americafitness-production.up.railway.app/my-attendance'),
       headers: {'Authorization': 'Bearer ${widget.token}'},
     );
 
@@ -53,7 +53,7 @@ class _AttendancePageState extends State<AttendancePage> {
 
   Future<void> doCheckIn() async {
     final response = await http.post(
-      Uri.parse('http://127.0.0.1:8000/check-in'),
+      Uri.parse('https://americafitness-production.up.railway.app/check-in'),
       headers: {'Authorization': 'Bearer ${widget.token}'},
     );
 
@@ -85,7 +85,7 @@ class _AttendancePageState extends State<AttendancePage> {
 
   Future<void> doCheckOut() async {
     final response = await http.post(
-      Uri.parse('http://127.0.0.1:8000/check-out'),
+      Uri.parse('https://americafitness-production.up.railway.app/check-out'),
       headers: {'Authorization': 'Bearer ${widget.token}'},
     );
 

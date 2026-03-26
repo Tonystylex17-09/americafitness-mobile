@@ -45,7 +45,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
 
   Future<void> fetchPoints() async {
     final response = await http.get(
-      Uri.parse('http://127.0.0.1:8000/my-points'),
+      Uri.parse('https://americafitness-production.up.railway.app/my-points'),
       headers: {'Authorization': 'Bearer ${widget.token}'},
     );
 
@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
 
   Future<void> fetchCartCount() async {
     final response = await http.get(
-      Uri.parse('http://127.0.0.1:8000/cart'),
+      Uri.parse('https://americafitness-production.up.railway.app/cart'),
       headers: {'Authorization': 'Bearer ${widget.token}'},
     );
     if (response.statusCode == 200) {

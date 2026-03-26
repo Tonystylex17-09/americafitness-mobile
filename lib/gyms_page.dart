@@ -24,7 +24,7 @@ class _GymsPageState extends State<GymsPage> {
 
   Future<void> fetchGyms() async {
     final response = await http.get(
-      Uri.parse('http://127.0.0.1:8000/gyms'),
+      Uri.parse('https://americafitness-production.up.railway.app/gyms'),
       headers: {'Authorization': 'Bearer ${widget.token}'},
     );
 

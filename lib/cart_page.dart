@@ -26,7 +26,7 @@ class _CartPageState extends State<CartPage> {
 
   Future<void> fetchCart() async {
     final response = await http.get(
-      Uri.parse('http://127.0.0.1:8000/cart'),
+      Uri.parse('https://americafitness-production.up.railway.app/cart'),
       headers: {'Authorization': 'Bearer ${widget.token}'},
     );
 
@@ -55,7 +55,7 @@ class _CartPageState extends State<CartPage> {
 
   Future<void> removeFromCart(int itemId) async {
     final response = await http.delete(
-      Uri.parse('http://127.0.0.1:8000/cart/remove/$itemId'),
+      Uri.parse('https://americafitness-production.up.railway.app/cart/remove/$itemId'),
       headers: {'Authorization': 'Bearer ${widget.token}'},
     );
 
